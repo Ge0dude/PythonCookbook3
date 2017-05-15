@@ -38,6 +38,19 @@ b.keys() - a.keys()
 # Find (key,value) pairs in common 
 a.items() & b.items() # { ('y', 2) }
 
+'''turns out there is dictionary comprehension just like list comprehension
+wonder why the author is doing all of this exposure to dict first? I guess
+it isn't an intro book so it doesn't really matter on order--dont' have to 
+assume anything'''
+
+
+
+# Make a new dictionary with certain keys removed
+c = {key:a[key] for key in a.keys() - {'z', 'w'}} 
+# c is {'x': 1, 'y': 2}
+
+d = {key:b[key] for key in b.keys() - {'x', 'y'}}
+
 
 
 
