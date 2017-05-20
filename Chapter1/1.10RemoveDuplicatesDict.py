@@ -38,8 +38,12 @@ def dedupe2(items, key=None):
             
 a2 = [ {'x':1, 'y':2}, {'x':1, 'y':3}, {'x':1, 'y':2}, {'x':2, 'y':4}]
 
-aPrime2 = list(dedupe2(a, key = lambda d:(d['x'],d['y']))) 
+aPrime2 = list(dedupe(a, key=lambda d: (d['x'],d['y']))) 
 #don't really understand why we need a lambda here
+#understand the result and teh underlying set operation but not the mechanics
+#of the lambda function
+
+
 
 
 
