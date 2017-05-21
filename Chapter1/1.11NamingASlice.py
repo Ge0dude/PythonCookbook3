@@ -19,3 +19,15 @@ twoToFour = slice(2,4)
 #In [169]: items[twoToFour] = [10,11]
 #now items yields Out[170]: [0, 1, 10, 11, 4, 5, 6]
 
+'''this surely must increase the memory costs?'''
+
+a = slice(10, 50, 2) #seeing just how object-oriented Python really is 
+
+'''slices can also be mapped onto sequences'''
+
+s = 'HelloWorld'
+a.indices(len(s))
+
+for i in range(*a.indices(len(s))):
+    print(s[i])
+
